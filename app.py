@@ -115,7 +115,7 @@ def top_feeds_api():
         }
         return jsonify(interesting_feeds)
     except:
-        print("http error")
+        return jsonify("Maximum of 10 posts can be returned, try a lower number")
 
 if __name__ == "__main__":
     app.run(debug=True)
